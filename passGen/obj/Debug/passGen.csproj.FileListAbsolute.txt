@@ -2,7 +2,12 @@ C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\bin\Debug\passGen.exe.config
 C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\bin\Debug\passGen.exe
 C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\bin\Debug\passGen.pdb
 C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.csprojAssemblyReference.cache
-C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.Form1.resources
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\MainWindow.g.cs
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\App.g.cs
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen_MarkupCompile.cache
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen_MarkupCompile.lref
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\MainWindow.baml
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.g.resources
 C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.Properties.Resources.resources
 C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.csproj.GenerateResource.cache
 C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.csproj.CoreCompileInputs.cache
