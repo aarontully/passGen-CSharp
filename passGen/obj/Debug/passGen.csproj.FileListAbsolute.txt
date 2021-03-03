@@ -1,0 +1,10 @@
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\bin\Debug\passGen.exe.config
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\bin\Debug\passGen.exe
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\bin\Debug\passGen.pdb
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.csprojAssemblyReference.cache
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.Form1.resources
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.Properties.Resources.resources
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.csproj.GenerateResource.cache
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.csproj.CoreCompileInputs.cache
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.exe
+C:\Users\tullya\OneDrive\c#\repos\passGen\passGen\obj\Debug\passGen.pdb
