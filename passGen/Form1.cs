@@ -63,7 +63,7 @@ namespace passGen {
         }
 
         private void btnGenerate_Click(object sender, EventArgs e) {
-            lblPassword.Text = "Hello World!";
+            lblPassword.Text = generatePassword(true, true, true, true, 16);
         }
     }
 }
