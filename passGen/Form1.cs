@@ -1,24 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Forms;
 
 namespace passGen {
+    public partial class Form1 : Form {
 
-    public partial class MainWindow : Window {
-
-        public string generatePassword(
-            
+        public static string generatePassword(
             bool incLowercase,
             bool incUppercase,
             bool incNumbers,
@@ -38,24 +31,20 @@ namespace passGen {
 
             string charSet = "";
 
-            if ((bool) Lowercase.IsChecked) {
+            if (incLowercase) {
                 charSet += lowerCase;
-                incLowercase = true;
             }
 
-            if ((bool)Uppercase.IsChecked) {
+            if (incUppercase) {
                 charSet += upperCase;
-                incUppercase = true;
             }
 
-            if ((bool) Numbers.IsChecked) {
+            if (incNumbers) {
                 charSet += numbers;
-                incNumbers = true;
             }
 
-            if ((bool) Symbols.IsChecked) {
+            if (incSymbols) {
                 charSet += symbols;
-                incSymbols = true;
             }
 
             char[] password = new char[passwordLength];
@@ -63,18 +52,22 @@ namespace passGen {
 
             System.Random random = new System.Random();
             for (int charPos = 0; charPos < passwordLength; charPos++) {
-                password[charPos] = charSet[random.Next(charSetLength - 1)];
+                password[charPos] = charSet[random.Next(charSetLength - 1)]; 
             }
 
             return string.Join(null, password);
         }
 
-        public MainWindow() {
+        public Form1() {
             InitializeComponent();
         }
 
-        void btnGenerate_Click(object sender, RoutedEventArgs e) {
+        private void btnGenerate_Click(object sender, EventArgs e) {
             lblPassword.Text = generatePassword(true, true, true, true, 16);
+        }
+
+        private void lblPassword_Click(object sender, EventArgs e) {
+            lblPassword.Size = new Size(100, 50);
         }
     }
 }
