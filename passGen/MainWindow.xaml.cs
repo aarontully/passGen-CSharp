@@ -17,13 +17,7 @@ namespace passGen {
 
     public partial class MainWindow : Window {
 
-        public string generatePassword(
-            
-            bool incLowercase,
-            bool incUppercase,
-            bool incNumbers,
-            bool incSymbols,
-            int passwordLength) {
+        public string generatePassword(int passwordLength) {
 
             const string upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             const string lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -40,22 +34,18 @@ namespace passGen {
 
             if ((bool) Lowercase.IsChecked) {
                 charSet += lowerCase;
-                incLowercase = true;
             }
 
             if ((bool)Uppercase.IsChecked) {
                 charSet += upperCase;
-                incUppercase = true;
             }
 
             if ((bool) Numbers.IsChecked) {
                 charSet += numbers;
-                incNumbers = true;
             }
 
             if ((bool) Symbols.IsChecked) {
                 charSet += symbols;
-                incSymbols = true;
             }
 
             char[] password = new char[passwordLength];
@@ -74,7 +64,9 @@ namespace passGen {
         }
 
         void btnGenerate_Click(object sender, RoutedEventArgs e) {
-            lblPassword.Text = generatePassword(true, true, true, true, 16);
+            double pass = passSlider.Value;
+            int val = Convert.ToInt32(pass);
+            lblPassword.Text = generatePassword(val);
         }
     }
 }
