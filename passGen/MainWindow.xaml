@@ -10,18 +10,20 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="27*"/>
             <ColumnDefinition Width="32*"/>
-            <ColumnDefinition Width="733*"/>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="74*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="512*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnGenerate" Content="Generate Password" HorizontalAlignment="Center" Margin="200,223,307,163" VerticalAlignment="Center" Width="226" Click="btnGenerate_Click" Height="33" FontSize="20" Grid.Column="2"/>
-        <TextBox x:Name="lblPassword" HorizontalAlignment="Left" Height="96" Margin="40,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="598" FontSize="36" TextAlignment="Center" Grid.Column="2"/>
-        <Border BorderBrush="Black" BorderThickness="1,1,2,2" HorizontalAlignment="Left" Height="208" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="3"/>
-        <CheckBox x:Name="Uppercase" Content="Uppercase" Grid.Column="2" HorizontalAlignment="Left" Margin="40,272,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.427,10.039" Height="26" Width="180" IsChecked="True" FontSize="18"/>
-        <CheckBox x:Name="Lowercase" Content="Lowercase" Grid.Column="2" HorizontalAlignment="Left" Margin="40,303,0,0" VerticalAlignment="Top" Height="30" Width="172" IsChecked="True" FontSize="18"/>
-        <CheckBox x:Name="Numbers" Content="Numbers" Grid.Column="2" HorizontalAlignment="Left" Margin="369,272,0,0" VerticalAlignment="Top" IsChecked="True" FontSize="18" Height="31" Width="146"/>
-        <CheckBox x:Name="Symbols" Content="Symbols" Grid.Column="2" HorizontalAlignment="Left" Margin="369,303,0,0" VerticalAlignment="Top" IsChecked="True" FontSize="18" Height="29" Width="132"/>
-        <Slider x:Name="passSlider" Grid.Column="2" HorizontalAlignment="Left" Margin="107,345,0,0" VerticalAlignment="Top" Width="424" IsSnapToTickEnabled="True" SmallChange="1" LargeChange="10" Maximum="128" Minimum="8" TickPlacement="TopLeft" Height="37"/>
-        <TextBlock Text="{Binding ElementName=passSlider, Path=Value}" Grid.Column="2" HorizontalAlignment="Center" Margin="56,345,631,37" TextWrapping="Wrap" VerticalAlignment="Center" Height="37" Width="46" TextAlignment="Center" FontWeight="Bold" FontSize="25"/>
-        <Border BorderBrush="Black" BorderThickness="1,1,2,2" Grid.Column="2" HorizontalAlignment="Left" Height="61" Margin="13,332,0,0" VerticalAlignment="Top" Width="634"/>
-
+        <Button x:Name="btnGenerate" Content="Generate Password" HorizontalAlignment="Center" Margin="2,223,307,163" VerticalAlignment="Center" Width="226" Click="btnGenerate_Click" Height="33" FontSize="20" Grid.Column="5" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="lblPassword" HorizontalAlignment="Left" Height="96" Margin="40,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="598" FontSize="36" TextAlignment="Center" Grid.Column="2" Grid.ColumnSpan="5"/>
+        <Border BorderBrush="Black" BorderThickness="1,1,2,2" HorizontalAlignment="Left" Height="208" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" Grid.ColumnSpan="7"/>
+        <CheckBox x:Name="Uppercase" Content="Uppercase" Grid.Column="2" HorizontalAlignment="Left" Margin="40,272,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.427,10.039" Height="26" Width="180" IsChecked="True" FontSize="18" Grid.ColumnSpan="4"/>
+        <CheckBox x:Name="Lowercase" Content="Lowercase" Grid.Column="2" HorizontalAlignment="Left" Margin="40,303,0,0" VerticalAlignment="Top" Height="30" Width="172" IsChecked="True" FontSize="18" Grid.ColumnSpan="4"/>
+        <CheckBox x:Name="Numbers" Content="Numbers" Grid.Column="6" HorizontalAlignment="Left" Margin="147.984,272,0,0" VerticalAlignment="Top" IsChecked="True" FontSize="18" Height="31" Width="146"/>
+        <CheckBox x:Name="Symbols" Content="Symbols" Grid.Column="6" HorizontalAlignment="Left" Margin="147.984,303,0,0" VerticalAlignment="Top" IsChecked="True" FontSize="18" Height="29" Width="132"/>
+        <Slider x:Name="passSlider" Grid.Column="3" HorizontalAlignment="Left" Margin="34,345,0,0" VerticalAlignment="Top" Width="424" IsSnapToTickEnabled="True" SmallChange="1" LargeChange="10" Maximum="128" Minimum="8" TickPlacement="TopLeft" Height="37" Grid.ColumnSpan="4"/>
+        <TextBlock Text="{Binding ElementName=passSlider, Path=Value}" Grid.Column="2" HorizontalAlignment="Center" Margin="56,345,45,37" TextWrapping="Wrap" VerticalAlignment="Center" Height="37" Width="46" TextAlignment="Center" FontWeight="Bold" FontSize="25" Grid.ColumnSpan="2"/>
     </Grid>
 </Window>
