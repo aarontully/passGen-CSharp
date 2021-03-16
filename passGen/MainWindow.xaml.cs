@@ -27,7 +27,7 @@ namespace passGen {
             const int passwordLengthMax = 128;
 
             if (passwordLength < passwordLengthMin || passwordLength > passwordLengthMax) {
-                return "Password length must be between 8 and 128";
+                MessageBox.Show("Password length must be between 8 and 128");
             }
 
             string charSet = "";
@@ -39,10 +39,14 @@ namespace passGen {
             if ((bool)Uppercase.IsChecked) {
                 charSet += upperCase;
             }
+            else if ((bool)!Lowercase.IsChecked ) {
+
+            }
 
             if ((bool) Numbers.IsChecked) {
                 charSet += numbers;
             }
+            
 
             if ((bool) Symbols.IsChecked) {
                 charSet += symbols;
@@ -67,6 +71,10 @@ namespace passGen {
             double pass = passSlider.Value;
             int val = Convert.ToInt32(pass);
             lblPassword.Text = generatePassword(val);
+            if (!string.IsNullOrEmpty(lblPassword.Text)) {
+                Clipboard.SetText(lblPassword.Text);
+            }
+                
         }
     }
 }
