@@ -32,23 +32,28 @@ namespace passGen {
 
             string charSet = "";
 
-            if ((bool) Lowercase.IsChecked) {
+            if ((bool)Lowercase.IsChecked)
+            {
                 charSet += lowerCase;
             }
 
-            if ((bool)Uppercase.IsChecked) {
+            if ((bool)Uppercase.IsChecked)
+            {
                 charSet += upperCase;
             }
-            else if ((bool)!Lowercase.IsChecked ) {
+            else if ((bool)!Lowercase.IsChecked)
+            {
 
             }
 
-            if ((bool) Numbers.IsChecked) {
+            if ((bool)Numbers.IsChecked)
+            {
                 charSet += numbers;
             }
-            
 
-            if ((bool) Symbols.IsChecked) {
+
+            if ((bool)Symbols.IsChecked)
+            {
                 charSet += symbols;
             }
 
@@ -70,8 +75,16 @@ namespace passGen {
         void btnGenerate_Click(object sender, RoutedEventArgs e) {
             double pass = passSlider.Value;
             int val = Convert.ToInt32(pass);
-            lblPassword.Text = generatePassword(val);
-            if (!string.IsNullOrEmpty(lblPassword.Text)) {
+            if((bool) Lowercase.IsChecked == true || (bool)Uppercase.IsChecked == true || (bool)Numbers.IsChecked == true || (bool)Symbols.IsChecked == true)
+            {
+                lblPassword.Text = generatePassword(val);
+            }
+            else
+            {
+                lblPassword.Text = "Please specify a parameter";
+            }
+            if (!string.IsNullOrEmpty(lblPassword.Text))
+            {
                 Clipboard.SetText(lblPassword.Text);
             }
                 
