@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -78,16 +79,33 @@ namespace passGen {
             if((bool) Lowercase.IsChecked == true || (bool)Uppercase.IsChecked == true || (bool)Numbers.IsChecked == true || (bool)Symbols.IsChecked == true)
             {
                 lblPassword.Text = generatePassword(val);
+
+                Popup popup = new Popup();
+                popup.PlacementTarget = lblPassword;
+                popup.Placement = PlacementMode.Right;
+                popup.HorizontalOffset = -55;
+                popup.PopupAnimation = PopupAnimation.Fade;
+                popup.AllowsTransparency = true;
+                TextBlock popupText = new TextBlock();
+                popupText.Text = "Copied!";
+                popupText.Background = Brushes.AliceBlue;
+                popupText.Foreground = Brushes.Black;
+                popupText.FontSize = 16;
+                popupText.TextWrapping = TextWrapping.Wrap;
+                popup.Child = popupText;
+                lblPassword.ToolTip = popup;
+                popup.IsOpen = true;
+                popup.StaysOpen = false;
             }
             else
             {
                 lblPassword.Text = "Please specify a parameter";
             }
+
             if (!string.IsNullOrEmpty(lblPassword.Text))
             {
                 Clipboard.SetText(lblPassword.Text);
             }
-                
         }
     }
 }

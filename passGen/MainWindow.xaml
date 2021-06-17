@@ -16,12 +16,14 @@
                        TextAlignment="Center"
                        Background="White"
                        TextWrapping="Wrap"
-                       Height="200"/>
+                       Height="200"
+                       Margin="30 10"/>
             <Button x:Name="btnGenerate"
                     Content="Generate Password"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Click="btnGenerate_Click">
+                    Click="btnGenerate_Click"
+                    Margin="20">
                 <Button.Effect>
                     <DropShadowEffect ShadowDepth="2"/>
                 </Button.Effect>
